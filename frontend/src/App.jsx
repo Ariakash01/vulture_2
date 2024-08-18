@@ -12,28 +12,12 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Context } from "./main";
 import Login from "./Pages/Login";
+import Status from "./Pages/Status";
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } =
     useContext(Context);
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const response = await axios.get(
-          "http://localhost:4000/api/v1/user/patient/me",
-          {
-            withCredentials: true,
-          }
-        );
-        setIsAuthenticated(true);
-        setUser(response.data.user);
-      } catch (error) {
-        setIsAuthenticated(false);
-        setUser({});
-      }
-    };
-    fetchUser();
-  }, [isAuthenticated]);
+  
 
   return (
     <>
@@ -45,6 +29,7 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/status" element={<Status />} />
         </Routes>
         <Footer />
         <ToastContainer position="top-center" />

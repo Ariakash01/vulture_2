@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   lastName: {
     type: String,
     required: [true, "Last Name Is Required!"],
-    minLength: [3, "Last Name Must Contain At Least 3 Characters!"],
+   
   },
   email: {
     type: String,
@@ -22,14 +22,12 @@ const userSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: [true, "Phone Is Required!"],
-    minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
-    maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
+   
   },
   nic: {
     type: String,
     required: [true, "NIC Is Required!"],
-    minLength: [13, "NIC Must Contain Only 13 Digits!"],
-    maxLength: [13, "NIC Must Contain Only 13 Digits!"],
+
   },
   dob: {
     type: Date,
@@ -48,7 +46,7 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    required: [true, "User Role Required!"],
+   
     enum: ["Patient", "Doctor", "Admin"],
   },
   doctorDepartment:{

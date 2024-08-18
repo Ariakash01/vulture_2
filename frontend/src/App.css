@@ -494,6 +494,15 @@ nav .hamburger {
 nav svg {
   font-size: 1.75rem;
 }
+.aaa{
+  border-radius: 1rem;
+}
+.abc{
+ 
+ padding: 0.8rem;
+ background-color: #fff8f8;
+ border-radius: 0.5rem;
+}
 @media (max-width: 1520px) {
   nav {
     min-width: 100%;
@@ -587,3 +596,28 @@ input[type="time"]:before {
 footer .logo-img{
   width: 100%;
 }
+
+
+.down{
+  margin: 100px;
+}
+
+.green{
+  color: #20c000;
+}
+.space{
+  margin-right: 50px;
+}
+.spa{
+  margin-right: 30px;
+}
+.spac{
+  margin-left: 100px;
+}
+
+
+
+
+
+
+

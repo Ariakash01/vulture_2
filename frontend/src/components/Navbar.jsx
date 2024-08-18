@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/patient/logout", {
+      .get("http://localhost:8000/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
@@ -33,7 +33,7 @@ const Navbar = () => {
     <>
       <nav className={"container"}>
         <div className="logo">
-          <img src="/logo.png" alt="logo" className="logo-img" />
+            <h4 className="abc">MEDI-HUB</h4>
         </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
@@ -43,6 +43,8 @@ const Navbar = () => {
             <Link to={"/appointment"} onClick={() => setShow(!show)}>
               Appointment
             </Link>
+            <Link to={"/status"} >Status
+Status            </Link>
             <Link to={"/about"} onClick={() => setShow(!show)}>
               About Us
             </Link>

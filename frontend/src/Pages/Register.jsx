@@ -23,7 +23,7 @@ const Register = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/patient/register",
+          "http://localhost:8000/api/v1/user/patient/register",
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,
@@ -44,7 +44,7 @@ const Register = () => {
           setPassword("");
         });
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response);
     }
   };
 
@@ -57,10 +57,7 @@ const Register = () => {
       <div className="container form-component register-form">
         <h2>Sign Up</h2>
         <p>Please Sign Up To Continue</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
+       
         <form onSubmit={handleRegistration}>
           <div>
             <input
@@ -91,12 +88,15 @@ const Register = () => {
             />
           </div>
           <div>
-            <input
+           <input
               type="number"
-              placeholder="NIC"
+              placeholder="Set Pin"
               value={nic}
               onChange={(e) => setNic(e.target.value)}
             />
+
+
+
             <input
               type={"date"}
               placeholder="Date of Birth"

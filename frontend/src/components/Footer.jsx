@@ -43,7 +43,7 @@ const Footer = () => {
         <hr />
         <div className="content">
           <div>
-            <img src="/logo.png" alt="logo" className="logo-img"/>
+        <h1>MEDI-HUB</h1>
           </div>
           <div>
             <h4>Quick Links</h4>
@@ -72,11 +72,11 @@ const Footer = () => {
             </div>
             <div>
               <MdEmail />
-              <span>zeelab@gmail.com</span>
+              <span>abcd12@gmail.com</span>
             </div>
             <div>
               <FaLocationArrow />
-              <span>Karachi, Pakistan</span>
+              <span>abc, chennai</span>
             </div>
           </div>
         </div>

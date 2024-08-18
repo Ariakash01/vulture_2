@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { Navigate } from "react-router-dom";
-
+import doc from "../../public/doc6.jpg";
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
   const { isAuthenticated } = useContext(Context);
@@ -11,7 +11,7 @@ const Doctors = () => {
     const fetchDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/doctors",
+          "http://localhost:8000/api/v1/user/doctors",
           { withCredentials: true }
         );
         setDoctors(data.doctors);
@@ -34,7 +34,7 @@ const Doctors = () => {
             return (
               <div className="card">
                 <img
-                  src={element.docAvatar && element.docAvatar.url}
+                  src={element.docAvatar && element.docAvatar.url||doc}
                   alt="doctor avatar"
                 />
                 <h4>{`${element.firstName} ${element.lastName}`}</h4>

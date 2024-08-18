@@ -58,7 +58,7 @@ const AddNewDoctor = () => {
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
       await axios
-        .post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
+        .post("http://localhost:8000/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
@@ -86,7 +86,10 @@ const AddNewDoctor = () => {
   return (
     <section className="page">
       <section className="container add-doctor-form">
+        {/*
         <img src="/logo.png" alt="logo" className="logo"/>
+
+        */}
         <h1 className="form-title">REGISTER A NEW DOCTOR</h1>
         <form onSubmit={handleAddNewDoctor}>
           <div className="first-wrapper">
@@ -124,12 +127,13 @@ const AddNewDoctor = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              <input
+           {/*   <input
                 type="number"
                 placeholder="NIC"
                 value={nic}
                 onChange={(e) => setNic(e.target.value)}
               />
+              */}
               <input
                 type={"date"}
                 placeholder="Date of Birth"

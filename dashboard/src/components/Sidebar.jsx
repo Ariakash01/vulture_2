@@ -18,7 +18,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/admin/logout", {
+      .get("http://localhost:8000/api/v1/user/admin/logout", {
         withCredentials: true,
       })
       .then((res) => {
@@ -44,6 +44,8 @@ const Sidebar = () => {
     navigateTo("/messages");
     setShow(!show);
   };
+
+  
   const gotoAddNewDoctor = () => {
     navigateTo("/doctor/addnew");
     setShow(!show);
@@ -64,8 +66,9 @@ const Sidebar = () => {
           <FaUserDoctor onClick={gotoDoctorsPage} />
           <MdAddModerator onClick={gotoAddNewAdmin} />
           <IoPersonAddSharp onClick={gotoAddNewDoctor} />
-          <AiFillMessage onClick={gotoMessagesPage} />
+         <AiFillMessage onClick={gotoMessagesPage} />
           <RiLogoutBoxFill onClick={handleLogout} />
+          
         </div>
       </nav>
       <div
