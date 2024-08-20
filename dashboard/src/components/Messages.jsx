@@ -28,7 +28,7 @@ const Messages = () => {
 
   return (
     <section className="page messages">
-      <h1>MESSAGE</h1>
+      <h1>IN Patient</h1>
       <div className="banner">
         {messages && messages.length > 0 ? (
           messages.map((element) => {
@@ -47,9 +47,62 @@ const Messages = () => {
                   <p>
                     Phone: <span>{element.phone}</span>
                   </p>
+                  
+                  <p>Department : <span>ENT</span></p>
+                  <p>Admit Date : <span>12-10-24</span></p>
+                </div>
+                <div className="details">
+                  <p>
+                    First Name: <span>{element.firstName}</span>
+                  </p>
+                  <p>
+                    Last Name: <span>{element.lastName}</span>
+                  </p>
+                  <p>
+                    Email: <span>{element.email}</span>
+                  </p>
+                  <p>
+                    Phone: <span>{element.phone}</span>
+                  </p>
+                  
+                  <p>Department : <span>ENT</span></p>
+                  <p>Admit Date : <span>12-10-24</span></p>
+                </div>
+                <div className="details">
+                  <p>
+                    First Name: <span>{element.firstName}</span>
+                  </p>
+                  <p>
+                    Last Name: <span>{element.lastName}</span>
+                  </p>
+                  <p>
+                    Email: <span>{element.email}</span>
+                  </p>
+                  <p>
+                    Phone: <span>{element.phone}</span>
+                  </p>
                   <p>
                     Message: <span>{element.message}</span>
                   </p>
+                  <p>Department : <span>ENT</span></p>
+                  <p>Admit Date : <span>12-10-24</span></p>
+                </div>
+                <div className="details">
+                  <p>
+                    First Name: <span>{element.firstName}</span>
+                  </p>
+                  <p>
+                    Last Name: <span>{element.lastName}</span>
+                  </p>
+                  <p>
+                    Email: <span>{element.email}</span>
+                  </p>
+                  <p>
+                    Phone: <span>{element.phone}</span>
+                  </p>
+                 
+                  <p>Department : <span>ENT</span></p>
+                  <p>Admit Date : <span>12-10-24</span></p>
                 </div>
               </div>
             );

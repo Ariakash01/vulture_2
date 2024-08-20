@@ -297,6 +297,11 @@ body {
     font-size: 20px;
   }
 }
+
+
+.details{
+  margin: 100px;
+}
 @media (max-width: 1020px) {
   .dashboard {
     height: fit-content;

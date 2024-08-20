@@ -90,18 +90,10 @@ const AddNewDoctor = () => {
         <img src="/logo.png" alt="logo" className="logo"/>
 
         */}
-        <h1 className="form-title">REGISTER A NEW DOCTOR</h1>
+        <h1 className="form-title">REGISTER A NEW RECEPTIONIST</h1>
         <form onSubmit={handleAddNewDoctor}>
           <div className="first-wrapper">
-            <div>
-              <img
-                src={
-                  docAvatarPreview ? `${docAvatarPreview}` : "/docHolder.jpg"
-                }
-                alt="Doctor Avatar"
-              />
-              <input type="file" onChange={handleAvatar} />
-            </div>
+         
             <div>
               <input
                 type="text"
@@ -154,23 +146,10 @@ const AddNewDoctor = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <select
-                value={doctorDepartment}
-                onChange={(e) => {
-                  setDoctorDepartment(e.target.value);
-                }}
-              >
-                <option value="">Select Department</option>
-                {departmentsArray.map((depart, index) => {
-                  return (
-                    <option value={depart} key={index}>
-                      {depart}
-                    </option>
-                  );
-                })}
-              </select>
-              <button type="submit">Register New Doctor</button>
+              
+              <button type="submit">Register New Receptionist</button>
             </div>
+            
           </div>
         </form>
       </section>

@@ -10,6 +10,12 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Context } from "../main";
 import { useNavigate } from "react-router-dom";
+import { FaRegAddressBook } from "react-icons/fa6";
+import { FaRegAddressCard } from "react-icons/fa6";
+import { FaBedPulse } from "react-icons/fa6";
+import { LiaRupeeSignSolid } from "react-icons/lia";
+import { FaWheelchair } from "react-icons/fa6";
+import { MdPersonRemoveAlt1 } from "react-icons/md";
 
 const Sidebar = () => {
   const [show, setShow] = useState(false);
@@ -63,12 +69,18 @@ const Sidebar = () => {
       >
         <div className="links">
           <TiHome onClick={gotoHomePage} />
+          <FaBedPulse />
+          <FaWheelchair />
+          <MdPersonRemoveAlt1 />
+          <LiaRupeeSignSolid />
+         {/* <FaRegAddressCard />
           <FaUserDoctor onClick={gotoDoctorsPage} />
           <MdAddModerator onClick={gotoAddNewAdmin} />
           <IoPersonAddSharp onClick={gotoAddNewDoctor} />
+          <FaRegAddressBook />*/}
          <AiFillMessage onClick={gotoMessagesPage} />
           <RiLogoutBoxFill onClick={handleLogout} />
-          
+         
         </div>
       </nav>
       <div

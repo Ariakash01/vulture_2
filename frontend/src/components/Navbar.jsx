@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link to={"/appointment"} onClick={() => setShow(!show)}>
               Appointment
             </Link>
-            <Link to={"/status"} >Status
+            <Link to={"/status"} >
 Status            </Link>
             <Link to={"/about"} onClick={() => setShow(!show)}>
               About Us
